@@ -1,0 +1,20 @@
+{
+	"header": {
+		"code": "2000",
+		"desc": "Success"
+	  },
+	"data": [
+		{ "name": "Credit card error payment reversal", "code": "CC ERROR CORRECTION ACTION" },
+		{ "name": "Credit card refund reversed or amount changed", "code": "CC REFUND CHANGE" },
+		{ "name": "Credit card chargeback reversed or amount changed", "code": "CC_CHARGEBACK_CHANGE" },
+		{ "name": "Uncollectable", "code": "UNCOLLECTABLE" },
+		{ "name": "Account closed", "code": "ACCT CLOSED" },
+		{ "name": "Nonsufficient funds", "code": "NSF" },
+		{ "name": "Payment reversal", "code": "PAYMENT REVERSAL" },
+		{ "name": "Resubmit check", "code": "RESUBMIT CHECK" },
+		{ "name": "Wrong amount", "code": "WRONG AMOUNT" },
+		{ "name": "Wrong customer", "code": "WRONG CUSTOMER" },
+		{ "name": "Wrong invoice", "code": "WRONG INVOICE" },
+		{ "name": "รูดบัตรผิด/โอนเงินผิด", "code": "รูดบัตรผิด/โอนเงินผิด" }
+	]
+}

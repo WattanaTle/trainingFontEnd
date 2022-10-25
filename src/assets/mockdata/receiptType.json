@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Standard Receipt",
+    "code": "1"
+  },
+  {
+    "name": "Miscellaneous Receipt",
+    "code": "2"
+  }
+]

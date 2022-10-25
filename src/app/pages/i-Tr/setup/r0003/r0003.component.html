@@ -1,0 +1,307 @@
+<div class="card p-fluid">
+  <h5>Receipt Running Number</h5>
+  <div class="field grid">
+    <div class="col-12 md:col-11">
+      <form [formGroup]="formSearch">
+        <div class="field grid">
+          <label class="col-12 mb-2 md:col-4 xl:col-3 md:mb-0 justify-content-start md:justify-content-end">*Business
+            Unit</label>
+          <div class="col-12 md:col-6 xl:col-4">
+            <p-dropdown [options]="businessUnits" formControlName="buId" optionLabel="name" [showClear]="true">
+            </p-dropdown>
+          </div>
+        </div>
+        <div class="field grid">
+          <label class="col-12 mb-2 md:col-4 xl:col-3 md:mb-0 justify-content-start md:justify-content-end">Branch/
+            Center/ HO</label>
+          <div class="col-12 md:col-6 xl:col-4">
+            <p-dropdown [options]="branches" formControlName="branchId" optionLabel="name"
+              placeholder="Select Branch/ Center/ HO" [showClear]="true"></p-dropdown>
+          </div>
+        </div>
+        <div class="field grid">
+          <label class="col-12 mb-2 md:col-4 xl:col-3 md:mb-0 justify-content-start md:justify-content-end">Start Date
+            To End</label>
+          <div class="col-12 md:col-6 xl:col-4">
+            <p-calendar
+              formControlName="dateStartEnd"
+              [readonlyInput]="true"
+              dateFormat="dd-mm-yy"
+              selectionMode="range"
+              [showIcon]="true"
+              [disabledDays]="[0, 6]"
+              inputId="icon"
+              [showButtonBar]="true"
+            ></p-calendar>
+          </div>
+        </div>
+        <div class="field grid">
+          <label
+            class="col-12 mb-2 md:col-4 xl:col-3 md:mb-0 justify-content-start md:justify-content-end">Enable</label>
+          <div class="col-12 md:col-4 xl:col-2">
+            <p-selectButton [options]="enableToggle" optionLabel="name" optionValue="code"
+              formControlName="enabledFlag"></p-selectButton>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="field grid md:justify-content-end mr-4">
+    <p-button label="Clear" [loading]="loading" (onClick)="onClear()" styleClass="p-button-outlined p-button-primary" class="mr-2" icon="pi pi-times">
+    </p-button>
+    <p-button label="Search" [loading]="loading" (onClick)="onSearch()" icon="pi pi-search"></p-button>
+  </div>
+
+</div>
+
+<div class="grid">
+  <div class="col-12">
+    <div class="card">
+      <p-toast></p-toast>
+      <p-toolbar styleClass="mb-4">
+        <ng-template pTemplate="left">
+          <div class="my-2">
+            <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2"
+              (click)="openNew()"></button>
+            <button pButton pRipple label="Delete" icon="pi pi-trash" class="p-button-danger" (click)="deleteSelected()"
+              [disabled]="!selectedInformation || !selectedInformation.length"></button>
+          </div>
+        </ng-template>
+
+        <ng-template pTemplate="right">
+          <button type="button" (click)="onDownloadTemplate()" pButton icon="pi pi-file" label="Template"
+            class="mr-2"></button>
+          <button type="button" (click)="onUploadDialog()" pButton icon="pi pi-plus" label="Import"
+            class="mr-2"></button>
+          <button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-primary"
+            [disabled]="disabledExport" (click)="exportCSV()"></button>
+        </ng-template>
+      </p-toolbar>
+
+      <p-table #dt [value]="informations" responsiveLayout="scroll" [rows]="10" [globalFilterFields]="[
+          'businessUnit',
+          'branch',
+          'prefix',
+          'startDate',
+          'endDate',
+          'runningNumber',
+          'intialValue',
+          'enable'
+        ]" [paginator]="false" [pageLinks]="1" [alwaysShowPaginator]="informations.length > 0"
+        [rowsPerPageOptions]="[5, 10, 25, 50]" [showCurrentPageReport]="true"
+        currentPageReportTemplate="Page {currentPage} of {totalPages}" [(selection)]="selectedInformation"
+        selectionMode="multiple" [rowHover]="true" dataKey="runningId" [rowSelectable]="isRowSelectable">
+        <ng-template pTemplate="caption">
+          <div class="flex flex-column md:flex-row md:justify-content-end md:align-items-center">
+            <span class="block mt-2 md:mt-0 p-input-icon-left">
+              <i class="pi pi-search"></i>
+              <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+                placeholder="Search..." />
+            </span>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="width: 2rem">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th></th>
+            <th pSortableColumn="buId">Business Unit <p-sortIcon field="buId"></p-sortIcon>
+            </th>
+            <th pSortableColumn="branchId">
+              Branch/Center/HO
+              <p-sortIcon field="branchId"></p-sortIcon>
+            </th>
+            <th pSortableColumn="receiptMethodCode">
+              Receipt Method
+              <p-sortIcon field="receiptMethodCode"></p-sortIcon>
+            </th>
+            <th pSortableColumn="prefixCode">Prefix <p-sortIcon field="prefixCode"></p-sortIcon>
+            </th>
+            <th pSortableColumn="startDate">Start Date<p-sortIcon field="startDate"></p-sortIcon>
+            </th>
+            <th pSortableColumn="endDate">End Date <p-sortIcon field="endDate"></p-sortIcon>
+            </th>
+            <th pSortableColumn="runningNumber">Running Number <p-sortIcon field="runningNumber"></p-sortIcon>
+            </th>
+            <th pSortableColumn="intialValue">Initial Value<p-sortIcon field="intialValue"></p-sortIcon>
+            </th>
+            <th Enable="enabledFlag">Enable<p-sortIcon field="enabledFlag"></p-sortIcon>
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-data>
+          <tr>
+            <td>
+              <p-tableCheckbox [value]="data" [disabled]="data.enabledFlag === 'N'"></p-tableCheckbox>
+            </td>
+            <td>
+              <button pButton pRipple type="button" icon="pi pi-pencil"
+              class="p-button-rounded p-button-text p-button-primary mr-2" (click)="onEditReceivable(data)"></button>
+              <span *ngIf="data.isEdit">
+                <button pButton pRipple type="button" icon="pi pi-trash"
+                class="p-button-rounded p-button-text p-button-secondary" (click)="deleteRow(data)" ></button>
+              </span>
+            </td>
+            <td class="text-center">
+              <span class="p-column-title">businessUnit</span>
+              {{ data.buId }}
+            </td>
+            <td class="text-center">
+              <span class="p-column-title">branch</span>
+              <!-- {{ displayBranch(data.branch) }} -->
+              {{ data.branchId }}
+            </td>
+            <td class="text-center">
+              <span class="p-column-title">receiptMethod</span>
+              {{ data.receiptMethodCode }}
+            </td>
+            <td class="text-center">
+              <span class="p-column-title">prefix</span>
+              {{ data.prefixCode }}
+            </td>
+            <td>
+              <span class="p-column-title">startDate</span>
+              {{ data.startDate | thaidate: 'dd-mm-yyyy' }}
+            </td>
+            <td>
+              <span class="p-column-title">endDate</span>
+              {{ data.endDate | thaidate: 'dd-mm-yyyy' }}
+            </td>
+            <td>
+              <span class="p-column-title">runningNumber</span>
+              {{ data.runningNumber }}
+            </td>
+            <td>
+              <span class="p-column-title">initialValue</span>
+              {{ data.initialValue }}
+            </td>
+            <td class="text-center">
+              <p-inputSwitch [readonly]="true" trueValue="Y" falseValue="N" [(ngModel)]="data.enabledFlag">
+              </p-inputSwitch>
+            </td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft" let-state>
+          Showing {{ state.totalRecords < 1 ? 0 : state.first + 1 }} to {{ state.totalRecords> 0
+            ? state.rows + state.first <= state.totalRecords ? state.rows + state.first : state.totalRecords : 0 }} of
+              {{ state.totalRecords ? state.totalRecords : 0 }} entries </ng-template>
+              <ng-template pTemplate="summary" ngIf="informations.length!=0">
+                In total there are {{ informations ? informations.length : 0 }} data.
+              </ng-template>
+      </p-table>
+      <p-paginator [rows]="paging.pageSize" [rowsPerPageOptions]="[5, 10, 25, 50]" [totalRecords]="paging.totalAll"
+        (onPageChange)="onPageChange($event)"></p-paginator>
+    </div>
+
+    <p-dialog [(visible)]="receiptDialog" [style]="{ width: '768px', height: '650px' }"
+      [header]="isUpdate ? 'Edit Receivable' : 'Create Receipt Number Running'" [modal]="true" class="p-fluid" #rd>
+      <ng-template pTemplate="content">
+        <form [formGroup]="formSave">
+          <div class="formgrid grid">
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label class="mb-2">Business Unit</label>
+              <p-dropdown optionLabel="name" optionValue="code" placeholder="Select BusinessUnit"
+                [options]="businessUnits" formControlName="buId" [showClear]="true"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formSave.controls.buId.value }"></p-dropdown>
+              <small class="ng-dirty ng-invalid text-pink-600"
+                *ngIf="submitted && !formSave.controls.buId.value">Business
+                Unit is required.</small>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label class="mb-2">Branch/Center/HO</label>
+              <p-dropdown optionLabel="name" optionValue="code" placeholder="Select Branch/Center/HO"
+                [options]="branches" formControlName="branchId" [showClear]="true"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formSave.controls.branchId.value }"></p-dropdown>
+              <small class="ng-dirty ng-invalid text-pink-600"
+                *ngIf="submitted && !formSave.controls.branchId.value">Receivable
+                Option is required.</small>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label class="mb-2">Receipt Method</label>
+              <p-dropdown optionLabel="name" optionValue="code" placeholder="Select Receipt Method"
+                [options]="receiptMethods" formControlName="receiptMethodCode" [showClear]="true"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formSave.controls.receiptMethodCode.value }">
+              </p-dropdown>
+              <small class="ng-dirty ng-invalid text-pink-600"
+                *ngIf="submitted && !formSave.controls.receiptMethodCode.value">Receipt
+                Method is required.</small>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label class="mb-2">Start Date</label>
+              <p-calendar [maxDate]="startAddMaxDate" formControlName="startDate" [readonlyInput]="true"
+                dateFormat="dd-mm-yy" [showIcon]="true" [disabledDays]="[0,6]" inputId="icon"
+                 (onSelect)="onChangeAddStartDate($event)" [showButtonBar]="true" [appendTo]="rd"></p-calendar>
+              <small class="ng-dirty ng-invalid text-pink-600"
+                *ngIf="submitted && !formSave.controls.startDate.value">Start Date is
+                required.</small>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label class="mb-2">End Date</label>
+              <p-calendar [minDate]="endAddMinDate" formControlName="endDate" [readonlyInput]="true"
+                dateFormat="dd-mm-yy" [showIcon]="true" [disabledDays]="[0,6]" inputId="icon"
+                 (onSelect)="onChangeAddEndDate($event)" [showButtonBar]="true" [appendTo]="rd"></p-calendar>
+              <small class="ng-dirty ng-invalid text-pink-600"
+                *ngIf="submitted && !formSave.controls.endDate.value">End Date is
+                required.</small>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="prefixCode" class="mb-2">Prefix</label>
+              <input type="text" pInputText id="prefixCode" formControlName="prefixCode" required autofocus
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formSave.controls.prefixCode.value }" />
+              <small class="ng-dirty ng-invalid text-pink-600"
+                *ngIf="submitted && !formSave.controls.prefixCode.value">Prefix is
+                required.</small>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="runningNumber" class="mb-2">Running Number</label>
+              <input type="text" pInputText id="runningNumber" formControlName="runningNumber" required autofocus
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formSave.controls.runningNumber.value }" />
+              <small class="ng-dirty ng-invalid text-pink-600"
+                *ngIf="submitted && !formSave.controls.runningNumber.value">Running
+                Number is required.</small>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="initialValue" class="mb-2">Initial Value</label>
+              <input type="text" pInputText id="initialValue" formControlName="initialValue" required autofocus
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formSave.controls.initialValue.value }" />
+              <small class="ng-dirty ng-invalid text-pink-600"
+                *ngIf="submitted && !formSave.controls.initialValue.value">Initial
+                Value is required.</small>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label class="mb-2">Enable</label>
+              <p-selectButton [options]="enableToggle" optionLabel="name" optionValue="code"
+                formControlName="enabledFlag"></p-selectButton>
+              <small class="ng-dirty ng-invalid text-pink-600"
+                *ngIf="submitted && !formSave.controls.enabledFlag.value">Enable is
+                required.</small>
+            </div>
+
+          </div>
+        </form>
+      </ng-template>
+      <ng-template pTemplate="footer">
+        <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-outlined p-button-primary"
+          (click)="hideReceivableDialog()"></button>
+        <button pButton pRipple label="Save" icon="pi pi-save" class="p-button-primary mr-0"
+          (click)="onSaveReceivableDialog()"></button>
+      </ng-template>
+    </p-dialog>
+
+    <p-dialog [(visible)]="deleteDialog" header="Confirm" [modal]="true" [style]="{ width: '450px' }">
+      <div class="flex align-items-center justify-content-center">
+        <i class="pi pi-exclamation-triangle mr-3" style="font-size: 2rem"></i>
+        <span>Are you sure you want to delete?</span>
+      </div>
+      <ng-template pTemplate="footer">
+        <button pButton pRipple icon="pi pi-times" class="p-button-outlined p-button-primary" label="No"
+          (click)="deleteDialog = false; isBatchDelete = false"></button>
+        <button pButton pRipple icon="pi pi-check" class="p-button-primary" label="Yes" *ngIf="isBatchDelete"
+          (click)="confirmDeleteSelected()"></button>
+        <button pButton pRipple icon="pi pi-check" class="p-button-primary" label="Yes" *ngIf="!isBatchDelete"
+          (click)="confirmDeleteRow()"></button>
+      </ng-template>
+    </p-dialog>
+  </div>
+</div>

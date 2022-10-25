@@ -1,0 +1,1602 @@
+[
+  {
+    "id": 1,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Felecia",
+        "lastname": "Kramer"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Simmons",
+        "lastname": "Gay"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Downs",
+        "lastname": "Cardenas"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Marks",
+        "lastname": "Chase"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Christy",
+        "lastname": "Alexander"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Vanessa",
+        "lastname": "Snyder"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Tanisha",
+        "lastname": "Walls"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Jimmie",
+        "lastname": "Pate"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Carrillo",
+        "lastname": "Francis"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Yvonne",
+        "lastname": "Cochran"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Mccormick",
+        "lastname": "Clarke"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Mitchell",
+        "lastname": "Chang"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Ray",
+        "lastname": "Nash"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Jacobson",
+        "lastname": "Spence"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Palmer",
+        "lastname": "Grimes"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Henry",
+        "lastname": "Bean"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Luella",
+        "lastname": "Mueller"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Wynn",
+        "lastname": "Lowery"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Silvia",
+        "lastname": "Glass"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Juliette",
+        "lastname": "Wolf"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Rivas",
+        "lastname": "Puckett"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Joann",
+        "lastname": "Bauer"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Lucille",
+        "lastname": "Key"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Lynda",
+        "lastname": "Gallagher"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Romero",
+        "lastname": "Schultz"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Wilder",
+        "lastname": "Barrera"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Huff",
+        "lastname": "Logan"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Koch",
+        "lastname": "Sandoval"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "York",
+        "lastname": "Sears"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Goodman",
+        "lastname": "Buckner"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Kelly",
+        "lastname": "Silva"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Kristy",
+        "lastname": "Beck"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Lena",
+        "lastname": "Doyle"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Rodriguez",
+        "lastname": "Russo"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Wilda",
+        "lastname": "Washington"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Lynch",
+        "lastname": "Williamson"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Bird",
+        "lastname": "Kirk"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Scott",
+        "lastname": "Carpenter"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Angelina",
+        "lastname": "Moss"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Morgan",
+        "lastname": "England"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Joy",
+        "lastname": "Pittman"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Conner",
+        "lastname": "Montoya"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Mona",
+        "lastname": "Bradford"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Cantu",
+        "lastname": "Osborn"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Barron",
+        "lastname": "Hudson"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Hunt",
+        "lastname": "Booker"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Sheena",
+        "lastname": "Joseph"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Ratliff",
+        "lastname": "Ruiz"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Jannie",
+        "lastname": "Rose"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Ava",
+        "lastname": "Cunningham"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Aisha",
+        "lastname": "Barton"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Yvette",
+        "lastname": "Hewitt"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Stella",
+        "lastname": "Wright"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Karina",
+        "lastname": "Villarreal"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Nieves",
+        "lastname": "Gamble"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Bridget",
+        "lastname": "Haynes"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Christian",
+        "lastname": "Black"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Weeks",
+        "lastname": "Livingston"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Emilia",
+        "lastname": "Taylor"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Lancaster",
+        "lastname": "Fisher"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Cecelia",
+        "lastname": "Guy"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Woodard",
+        "lastname": "Rowe"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Cornelia",
+        "lastname": "Gilmore"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Byrd",
+        "lastname": "Cummings"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Consuelo",
+        "lastname": "Riggs"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Alvarez",
+        "lastname": "West"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Diann",
+        "lastname": "Hebert"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Tate",
+        "lastname": "Calderon"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Bridges",
+        "lastname": "Duncan"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Debra",
+        "lastname": "Mccullough"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Anna",
+        "lastname": "Faulkner"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Minnie",
+        "lastname": "Gordon"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Arline",
+        "lastname": "Gilliam"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Serrano",
+        "lastname": "Sharp"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Loraine",
+        "lastname": "Hoffman"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Mcdaniel",
+        "lastname": "Dillard"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Vincent",
+        "lastname": "Velez"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Zelma",
+        "lastname": "Harris"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Edwards",
+        "lastname": "Morgan"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Harvey",
+        "lastname": "Lucas"
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Richard",
+        "lastname": "Beach"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Cindy",
+        "lastname": "Smith"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Kitty",
+        "lastname": "Park"
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Caroline",
+        "lastname": "Waters"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Cochran",
+        "lastname": "Hopper"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Carolyn",
+        "lastname": "Gill"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Sherry",
+        "lastname": "Shepherd"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Jocelyn",
+        "lastname": "Mills"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Pacheco",
+        "lastname": "Becker"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Earline",
+        "lastname": "Pierce"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Elise",
+        "lastname": "Hardy"
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Barber",
+        "lastname": "Johns"
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Chavez",
+        "lastname": "Compton"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Jacobs",
+        "lastname": "Gardner"
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Patton",
+        "lastname": "Kent"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รายได้อื่น",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Carroll",
+        "lastname": "Ramos"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-รับเงินคืนจากเงินทดรองจ่าย",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Write-Off",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Snow",
+        "lastname": "Dale"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "YES",
+    "receiptAction": "Write-Off",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Morrow",
+        "lastname": "Avila"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Miscellaneous Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "NO",
+    "manageGlobalDff": [
+      {
+        "name": "Marcella",
+        "lastname": "Wilder"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "businessUnit": "VRH",
+    "receivableOption": "xxxx-ลูกหนี้รับสภาพหนี้",
+    "receiptType": "Standard Receipt",
+    "receivableActivity": "บัญชีพักกลางเงินมัดจำ",
+    "applyPremium": "NO",
+    "receiptAction": "Create",
+    "enable": "YES",
+    "manageGlobalDff": [
+      {
+        "name": "Navarro",
+        "lastname": "Rocha"
+      }
+    ]
+  }
+]

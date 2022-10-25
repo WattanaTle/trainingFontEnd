@@ -1,0 +1,9 @@
+[
+  { "code": "01", "name": "Created" },
+  { "code": "02", "name": "Confirmed" },
+  { "code": "03", "name": "Remitted" },
+  { "code": "04", "name": "Cleared" },
+  { "code": "05", "name": "Reverse" },
+  { "code": "06", "name": "Cancel" },
+  { "code": "07", "name": "Hold" }
+]

@@ -1,0 +1,30 @@
+[
+	{
+		"code": 122004,
+		"name": "Direct Mail"
+	},
+	{
+		"code": 122001,
+		"name": "Face to face"
+	},
+	{
+		"code": 122003,
+		"name": "Online"
+	},
+	{
+		"code": 122007,
+		"name": "Others"
+	},
+	{
+		"code": 122002,
+		"name": "Telemarketing"
+	},
+	{
+		"code": 122005,
+		"name": "Walkin"
+	},
+	{
+		"code": 122006,
+		"name": "Worksite"
+	}
+]

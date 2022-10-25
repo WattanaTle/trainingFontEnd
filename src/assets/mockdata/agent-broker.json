@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1",
+    "receiptNumber": "11232451354",
+    "branch": "1C501",
+    "receiptMethod": "1C501-Credit Card",
+    "receiptAmount": 20000,
+    "receiptDate": "2019-05-20T12:32:49",
+    "feeType": "Credit Card",
+    "feeRate": 0.5,
+    "feeAmount": 100,
+    "cardType": "Visa - premium",
+    "cardNumber": "4122345430",
+    "bankName": "KBANK",
+    "status": "Created",
+    "miscReceiptNumber": "1234",
+    "feeReceiptNumber": "1234",
+    "feeReceivedDate": "2019-05-20T12:32:49",
+    "note": null,
+    "cancel": "N",
+    "cancelReason": null,
+    "attachment": null
+  }
+]

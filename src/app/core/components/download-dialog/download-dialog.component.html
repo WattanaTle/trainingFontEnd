@@ -1,0 +1,12 @@
+<div class="grid m-0 align-items-center" *ngFor="let file of files; let item = index">
+  <i class="align-self-center pi pi-file text-green-500"></i>
+  <p class="col-10 mb-0 ml-1 white-space-normal text-overflow-ellipsis">{{ file.payment }}</p>
+  <button
+    pButton
+    pRipple
+    type="button"
+    icon="pi pi-download"
+    class="p-button-rounded p-button-text p-button-primary col-1"
+    (click)="onDownload(item)"
+  ></button>
+</div>

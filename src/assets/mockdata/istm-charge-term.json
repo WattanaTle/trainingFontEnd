@@ -1,0 +1,18 @@
+[
+	{
+		"pay_term": 3,
+		"term_description": "3 งวด"
+	},
+	{
+		"pay_term": 6,
+		"term_description": "6 งวด"
+	},
+	{
+		"pay_term": 10,
+		"term_description": "10 งวด"
+	},
+	{
+		"pay_term": 12,
+		"term_description": "12 งวด"
+	}
+]

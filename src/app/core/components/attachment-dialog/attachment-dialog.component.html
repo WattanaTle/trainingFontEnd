@@ -1,0 +1,17 @@
+<p-fileUpload name="Files[]" #fileUploader [customUpload]="true" (onSelect)="onSelect($event)" (uploadHandler)="onUploadFile($event)"
+  (onClear)="onClear()" chooseIcon="pi pi-file" chooseLabel="Browse" accept="application/pdf" [multiple]="true">
+  <ng-template pTemplate="file" let-file>
+    <div class="grid m-0 align-items-center">
+        <i class="align-self-center pi pi-file text-green-500"></i>
+            <p class="col-10 xl:col-11 mb-0 ml-1 white-space-normal text-overflow-ellipsis">{{ file.name }}</p>
+            <button
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-trash"
+            class="p-button-rounded p-button-text p-button-danger col-1 px-3"
+            (click)="deleteFile(file,fileUploader)"
+          ></button>
+          </div>
+    </ng-template>
+</p-fileUpload>

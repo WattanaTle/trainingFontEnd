@@ -1,0 +1,7 @@
+[
+	{ "code": "CREATED", "name": "Created Collection Contract" },
+	{ "code": "REMITTED", "name": "เงินเข้าธนาคาร" },
+	{ "code": "CLEARED", "name": "Reconcile Bank" },
+	{ "code": "REVERSE", "name": "รายการรับที่ยังไม่ได้ apply invoice" },
+	{ "code": "REVERSE_AND_INVOICE", "name": "รายการรับที่ apply invoice แล้ว" }
+  ]

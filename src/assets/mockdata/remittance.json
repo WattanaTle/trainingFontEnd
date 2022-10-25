@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "receiptNumber": "1C501-1-2112-000001",
+    "receiptDate": "03-12-2021",
+    "receiptMethod": "CHEQUE",
+    "receivableOption": "รับค่าส่วนเกินสิทธิ์",
+    "customerName": "นายอํานาจ",
+    "numberOfReceipt":2,
+    "maturityDate": "07-12-2021",
+    "depositDate": "07-12-2021",
+    "delay": "03-12-2021",
+    "status": "Completed Creation", 
+    "group":[
+      {
+          "receiptNumber": "1C501-1-2112-000001",
+          "receiptDate": "03-12-2021",
+          "receiptMethod": "CHEQUE",
+          "receivableOption": "รับค่าส่วนเกินสิทธิ์",
+          "customerName": "นายอํานาจ",
+          "maturityDate": "30-12-2021",
+          "status": "Confirmed"
+      },
+      {
+        "receiptNumber": "1C501-1-2112-000002",
+        "receiptDate": "03-12-2021",
+        "receiptMethod": "CHEQUE",
+        "receivableOption": "รับค่าส่วนเกินสิทธิ์",
+        "customerName": "นายอํานาจ",
+        "maturityDate": "30-12-2021",
+        "status": "Confirmed"
+    }
+    ]
+  }, 
+  {
+    "id": "2",
+    "receiptNumber": "1C501-1-2112-000002",
+    "receiptDate": "03-12-2021",
+    "receiptMethod": "CHEQUE",
+    "receivableOption": "รับค่าส่วนเกินสิทธิ์",
+    "customerName": "นายอํานาจ",
+    "maturityDate": "07-12-2021",
+    "depositDate": "07-12-2021",
+    "delay": "03-12-2021",
+    "status": "Completed Creation", 
+    "group":[
+      {
+          "receiptNumber": "1C501-1-2112-000001",
+          "receiptDate": "03-12-2021",
+          "receiptMethod": "CHEQUE",
+          "receivableOption": "รับค่าส่วนเกินสิทธิ์",
+          "customerName": "นายอํานาจ",
+          "maturityDate": "30-12-2021",
+          "status": "Remitted"
+      }
+    ]
+  }
+]

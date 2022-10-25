@@ -1,0 +1,437 @@
+<div class="card p-fluid">
+  <h5>Setup Receivable Option</h5>
+  <div class="field grid">
+    <div class="col-12 md:col-11">
+      <formSearch [formGroup]="formSearch">
+        <div class="field grid">
+          <label class="col-12 mb-2 md:col-4 xl:col-3 md:mb-0 justify-content-start md:justify-content-end">*Business
+            Unit</label>
+          <div class="col-12 md:col-6 xl:col-4">
+            <p-dropdown [options]="businessUnits" formControlName="buId" optionLabel="name" optionValue="code"
+              placeholder="Select BusinessUnit" [showClear]="true">
+            </p-dropdown>
+          </div>
+        </div>
+        <div class="field grid">
+          <label class="col-12 mb-2 md:col-4 xl:col-3 md:mb-0 justify-content-start md:justify-content-end">Branch/
+            Center/ HO</label>
+          <div class="col-12 md:col-6 xl:col-4">
+            <p-dropdown [options]="branches" formControlName="branchId" optionLabel="name" optionValue="code"
+              placeholder="Select Branch" [showClear]="true">
+            </p-dropdown>
+          </div>
+        </div>
+        <div class="field grid">
+          <label
+            class="col-12 mb-2 md:col-4 xl:col-3 md:mb-0 justify-content-start md:justify-content-end">Enable</label>
+          <div class="col-12 md:col-4 xl:col-2">
+            <p-selectButton [options]="enableToggle" optionLabel="name" optionValue="code"
+              formControlName="enabledFlag"></p-selectButton>
+          </div>
+        </div>
+      </formSearch>
+    </div>
+  </div>
+  <div class="field grid md:justify-content-end mr-4">
+    <p-button label="Clear" [loading]="loading" (onClick)="onClear()" icon="pi pi-times"
+      styleClass="p-button-outlined p-button-primary" class="mr-2">
+    </p-button>
+    <p-button label="Search" [loading]="loading" (onClick)="onSearch()" icon="pi pi-search"></p-button>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="col-12">
+    <div class="card">
+      <p-toast></p-toast>
+      <p-toolbar styleClass="mb-4">
+        <ng-template pTemplate="left">
+          <div class="my-2">
+            <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2"
+              (click)="openNew()"></button>
+            <!-- <button
+              pButton
+              pRipple
+              label="Delete"
+              icon="pi pi-trash"
+              class="p-button-danger"
+              (click)="deleteSelected()"
+              [disabled]="!selectedInfomation || !selectedInfomation.length"
+            ></button> -->
+          </div>
+        </ng-template>
+
+        <ng-template pTemplate="right">
+          <button type="button" (click)="onDownloadTemplate()" pButton icon="pi pi-file" label="Template"
+            class="mr-2"></button>
+          <button type="button" (click)="onUploadDiaglog()" pButton icon="pi pi-plus" label="Import"
+            class="mr-2"></button>
+          <button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-primary"
+            [disabled]="disabledExport" (click)="exportCSV()"></button>
+        </ng-template>
+      </p-toolbar>
+
+      <p-table #dt [value]="informations" responsiveLayout="scroll" [rows]="10" [globalFilterFields]="[
+          'businessUnit',
+          'receivableOption',
+          'receiptType',
+          'receivableActivity',
+          'applyPremium',
+          'receiptAction',
+          'enable'
+        ]" [paginator]="false" [pageLinks]="1" [alwaysShowPaginator]="informations.length > 0"
+        [rowsPerPageOptions]="[5,10, 25, 50]" [showCurrentPageReport]="true"
+        currentPageReportTemplate="Page {currentPage} of {totalPages}" [(selection)]="selectedInfomation"
+        selectionMode="multiple" [rowHover]="true" dataKey="id" [rowSelectable]="isRowSelectable">
+        <ng-template pTemplate="caption">
+          <div class="flex flex-column md:flex-row md:justify-content-end md:align-items-center">
+            <span class="block mt-2 md:mt-0 p-input-icon-left">
+              <i class="pi pi-search"></i>
+              <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+                placeholder="Search..." />
+            </span>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <!-- <th style="width: 2rem">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th> -->
+            <th></th>
+            <th pSortableColumn="businessUnit">Business Unit <p-sortIcon field="businessUnit"></p-sortIcon>
+            </th>
+            <th pSortableColumn="receivableOption">
+              Receivable Option
+              <p-sortIcon field="receivableOption"></p-sortIcon>
+            </th>
+            <th pSortableColumn="receiptType">Receipt Type <p-sortIcon field="receiptType"></p-sortIcon>
+            </th>
+            <th pSortableColumn="receivableActivity">
+              Receivable Activity <p-sortIcon field="receivableActivity"></p-sortIcon>
+            </th>
+            <th pSortableColumn="applyPremium">Apply Premium <p-sortIcon field="applyPremium"></p-sortIcon>
+            </th>
+            <th pSortableColumn="receiptActionTypeId">Receipt Action <p-sortIcon field="receiptAction"></p-sortIcon>
+            </th>
+            <th pSortableColumn="enable">Enable <p-sortIcon field="enable"></p-sortIcon>
+            </th>
+            <th pSortableColumn="manageGlobalDff" class="text-center">
+              Manage Global DFF
+              <p-sortIcon field="manageGlobalDff"></p-sortIcon>
+            </th>
+            <th></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-data>
+          <tr>
+            <!-- <td>
+              <p-tableCheckbox [value]="data"></p-tableCheckbox>
+            </td> -->
+            <td>
+              <button pButton pRipple type="button" icon="pi pi-pencil"
+                class="p-button-rounded p-button-text p-button-primary" (click)="onEditReceivable(data)"></button>
+            </td>
+            <td class="text-center">
+              <span class="p-column-title">businessUnit</span>
+              {{ data.buId }}
+            </td>
+            <td>
+              <span class="p-column-title">receivableOption</span>
+              {{ data.receivableOptionName }}
+            </td>
+            <td>
+              <span class="p-column-title">receiptType</span>
+              {{ data.receiptTypeId }}
+            </td>
+            <td>
+              <span class="p-column-title">receivableActivity</span>
+              {{ data.receivableActivityId }}
+            </td>
+            <td class="text-center">
+              <span class="p-column-title">applyPremium</span>
+              {{ data.applyPremiumFlag }}
+            </td>
+            <td class="text-center">
+              <span class="p-column-title">receiptActionTypeId</span>
+              {{ data.receiptActionTypeId }}
+            </td>
+            <td class="text-center">
+              <p-inputSwitch [readonly]="true" trueValue="Y" falseValue="N" [(ngModel)]="data.enabledFlag">
+              </p-inputSwitch>
+            </td>
+            <td>
+              <div class="flex justify-content-center">
+                <button pButton pRipple type="button" icon="pi pi-ellipsis-h" class="p-button-rounded p-button-text"
+                  (click)="editManageGlobalDff(data)"></button>
+              </div>
+            </td>
+            <!-- <td>
+              <button pButton pRipple type="button" icon="pi pi-trash"
+                class="p-button-rounded p-button-secondary p-button-sm"></button>
+            </td> -->
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft" let-state>
+          Showing {{ state.totalRecords < 1 ? 0 : state.first + 1 }} to {{ state.totalRecords> 0
+            ? state.rows + state.first <= state.totalRecords ? state.rows + state.first : state.totalRecords : 0 }} of
+              {{ state.totalRecords ? state.totalRecords : 0 }} entries </ng-template>
+
+              <ng-template pTemplate="summary" ngIf="informations.length!=0">
+                In total there are {{ informations ? informations.length : 0 }} data.
+              </ng-template>
+      </p-table>
+      <p-paginator [rows]="paging.pageSize" [rowsPerPageOptions]="[5, 10, 25, 50]" [totalRecords]="paging.totalAll"
+        (onPageChange)="onPageChange($event)"></p-paginator>
+    </div>
+
+    <p-dialog [(visible)]="receivableDialog" [style]="{ width: '768px', height: '768px' }"
+      [header]="isUpdate ? 'Edit Receivable' : 'Create Receivable'" [modal]="true" class="p-fluid">
+      <ng-template pTemplate="content">
+        <formSearch [formGroup]="formDetail">
+          <div class="formgrid grid">
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">Business Unit</label>
+              <p-dropdown optionLabel="name" optionValue="code" placeholder="Select BusinessUnit"
+                [options]="businessUnits" formControlName="buId" [showClear]="true"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.buId.value }"></p-dropdown>
+              <small class="ng-dirty ng-invalid text-pink-600"
+                *ngIf="submitted && !formDetail.controls.buId.value">Business
+                Unit is required.</small>
+
+            </div>
+            <div class="field  col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">Branch/Center/HO</label>
+            
+                <p-dropdown [options]="branches" formControlName="branchId" optionLabel="name" optionValue="code"
+                  placeholder="Branch/Center/HO" [showClear]="true"
+                  [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.branchId.value }"></p-dropdown>
+                  <small class="ng-dirty ng-invalid text-pink-600"
+                  *ngIf="submitted && !formDetail.controls.branchId.value">Branche
+                  is required.</small>
+             
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">Receivable Option</label>
+              <input type="text" pInputText id="name" formControlName="receivableOptionName" required autofocus
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.receivableOptionName.value }" />
+              <small class="ng-dirty ng-invalid text-pink-600"
+                *ngIf="submitted && !formDetail.controls.receivableOptionName.value">Receivable Option is
+                required.</small>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">Receipt Type</label>
+              <p-dropdown optionLabel="name" optionValue="code" placeholder="Select Receipt Type"
+                [options]="receiptTypes" (onChange)="seleteReceiptType($event)" formControlName="receiptTypeId"
+                [showClear]="true"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.receiptTypeId.value }">
+              </p-dropdown>
+              <small class="ng-dirty ng-invalid text-pink-600"
+                *ngIf="submitted && !formDetail.controls.receiptTypeId.value">Receipt Type
+                is required.</small>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">Receivable Activity</label>
+              <p-dropdown optionLabel="name" optionValue="code" placeholder="Select Receivable Activity"
+                [options]="receivableActivitys" formControlName="receivableActivityId" [showClear]="true"
+                [disabled]="isDimReceivableActivity">
+              </p-dropdown>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">Apply Premium</label>
+              <p-selectButton [options]="applyToggle" optionLabel="name" optionValue="code"
+                formControlName="applyPremiumFlag" [disabled]="isDimApplyPremiumFlag"></p-selectButton>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">Receipt Action</label>
+              <p-dropdown optionLabel="name" optionValue="code" placeholder="Select Receipt Action"
+                [options]="receiptActions" formControlName="receiptActionTypeId" [showClear]="true"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.receiptActionTypeId.value }">
+              </p-dropdown>
+              <small class="ng-dirty ng-invalid text-pink-600"
+                *ngIf="submitted && !formDetail.controls.receiptActionTypeId.value">Receipt
+                Action is required.</small>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">Enable</label>
+              <p-selectButton [options]="enableToggle" optionLabel="name" optionValue="code"
+                formControlName="enabledFlag"></p-selectButton>
+            </div>
+          </div>
+          <div class="formgrid grid">
+            <!-- <div class="field col-12 md:col-12 lg:col-12">
+              <label for="name" class="field col-12 md:col-12 lg:col-12">Manage Global</label>
+            </div> -->
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">ผู้นำส่ง</label>
+              <p-dropdown optionLabel="name" optionValue="code" formControlName="attribute1"
+                placeholder="Select Attributes" [options]="attributes"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.attribute1.value }">
+              </p-dropdown>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">เลขกรมธรรม์</label>
+              <p-dropdown optionLabel="name" optionValue="code" formControlName="attribute2"
+                placeholder="Select Attributes" [options]="attributes"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.attribute2.value }">
+              </p-dropdown>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">สลักหลัง</label>
+              <p-dropdown optionLabel="name" optionValue="code" formControlName="attribute3"
+                placeholder="Select Attributes" [options]="attributes"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.attribute3.value }">
+              </p-dropdown>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">Statement number</label>
+              <p-dropdown optionLabel="name" optionValue="code" formControlName="attribute4"
+                placeholder="Select Attributes" [options]="attributes"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.attribute4.value }">
+              </p-dropdown>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">เลขที่ใบคำขอ</label>
+              <p-dropdown optionLabel="name" optionValue="code" formControlName="attribute5"
+                placeholder="Select Attributes" [options]="attributes"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.attribute5.value }">
+              </p-dropdown>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">เลขที่กรมธรรม์เดิม</label>
+              <p-dropdown optionLabel="name" optionValue="code" formControlName="attribute6"
+                placeholder="Select Attributes" [options]="attributes "
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.attribute6.value }">
+              </p-dropdown>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">เลขที่ใบยืมเงินทดลอง</label>
+              <p-dropdown optionLabel="name" optionValue="code" formControlName="attribute7"
+                placeholder="Select Attributes" [options]="attributes"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.attribute7.value }">
+              </p-dropdown>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">เลขที่อุบัติเหตุ</label>
+              <p-dropdown optionLabel="name" optionValue="code" formControlName="attribute8"
+                placeholder="Select Attributes" [options]="attributes"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.attribute8.value }">
+              </p-dropdown>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">เลขที่รับแจ้งอุบัติเหตุ</label>
+              <p-dropdown optionLabel="name" optionValue="code" formControlName="attribute9"
+                placeholder="Select Attributes" [options]="attributes"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.attribute9.value }">
+              </p-dropdown>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">Collection Contract Ref No</label>
+              <p-dropdown optionLabel="name" optionValue="code" formControlName="attribute10"
+                placeholder="Select Attributes" [options]="attributes"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.attribute10.value }">
+              </p-dropdown>
+            </div>
+            <div class="field col-12 md:col-4 lg:col-4">
+              <label for="name" class="mb-2">งวดที่</label>
+              <p-dropdown optionLabel="name" optionValue="code" formControlName="attribute11"
+                placeholder="Select Attributes" [options]="attributes"
+                [ngClass]="{ 'ng-invalid ng-dirty': submitted && !formDetail.controls.attribute11.value }">
+              </p-dropdown>
+            </div>
+          </div>
+        </formSearch>
+      </ng-template>
+      <ng-template pTemplate="footer">
+        <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-outlined p-button-primary"
+          (click)="hideReceivableDialog()"></button>
+        <button pButton pRipple label="Save" icon="pi pi-save" class="p-button-primary mr-0"
+          (click)="onSaveReceivableDialog()"></button>
+      </ng-template>
+    </p-dialog>
+
+    <p-dialog [(visible)]="deleteDialog" header="Confirm" [modal]="true" [style]="{ width: '450px' }">
+      <div class="flex align-items-center justify-content-center">
+        <i class="pi pi-exclamation-triangle mr-3" style="font-size: 2rem"></i>
+        <span>Are you sure you want to delete?</span>
+      </div>
+      <ng-template pTemplate="footer">
+        <button pButton pRipple icon="pi pi-times" class="p-button-outlined p-button-primary" label="No"
+          (click)="deleteDialog = false"></button>
+        <button pButton pRipple icon="pi pi-check" class="p-button-primary" label="Yes"
+          (click)="confirmDeleteSelected()"></button>
+      </ng-template>
+    </p-dialog>
+  </div>
+</div>
+
+<p-dialog [(visible)]="manageGlobalDffDialog" [modal]="true" [style]="{ width: '768px', height: '650px' }">
+  <ng-template pTemplate="header">
+    <h5>Manage Global Desciptive Flexfield</h5>
+  </ng-template>
+  <ng-template pTemplate="content">
+    <div class="formgrid grid">
+      <div class="field col-12 md:col-6 lg:col-6">
+        <label for="name" class="mb-2">ผู้นำส่ง</label>
+        <p-dropdown styleClass="col-12" optionLabel="name" optionValue="code" placeholder="Select Attributes"
+          [options]="attributes" [(ngModel)]="manageDFF.attribute1"></p-dropdown>
+      </div>
+      <div class="field col-12 md:col-6 lg:col-6">
+        <label for="name" class="mb-2">เลขกรมธรรม์</label>
+        <p-dropdown styleClass="col-12" optionLabel="name" optionValue="code" placeholder="Select Attributes"
+          [options]="attributes" [(ngModel)]="manageDFF.attribute2"></p-dropdown>
+      </div>
+      <div class="field col-12 md:col-6 lg:col-6">
+        <label for="name" class="mb-2">สลักหลัง</label>
+        <p-dropdown styleClass="col-12" optionLabel="name" optionValue="code" placeholder="Select Attributes"
+          [options]="attributes" [(ngModel)]="manageDFF.attribute3"></p-dropdown>
+      </div>
+      <div class="field col-12 md:col-6 lg:col-6">
+        <label for="name" class="mb-2">Statement number</label>
+        <p-dropdown styleClass="col-12" optionLabel="name" optionValue="code" placeholder="Select Attributes"
+          [options]="attributes" [(ngModel)]="manageDFF.attribute4"></p-dropdown>
+      </div>
+      <div class="field col-12 md:col-6 lg:col-6">
+        <label for="name" class="mb-2">เลขที่ใบคำขอ</label>
+        <p-dropdown styleClass="col-12" optionLabel="name" optionValue="code" placeholder="Select Attributes"
+          [options]="attributes" [(ngModel)]="manageDFF.attribute5"></p-dropdown>
+      </div>
+      <div class="field col-12 md:col-6 lg:col-6">
+        <label for="name" class="mb-2">เลขที่กรมธรรม์เดิม</label>
+        <p-dropdown styleClass="col-12" optionLabel="name" optionValue="code" placeholder="Select Attributes"
+          [options]="attributes " [(ngModel)]="manageDFF.attribute6">
+        </p-dropdown>
+      </div>
+      <div class="field col-12 md:col-6 lg:col-6">
+        <label for="name" class="mb-2">เลขที่ใบยืมเงินทดลอง</label>
+        <p-dropdown styleClass="col-12" optionLabel="name" optionValue="code" placeholder="Select Attributes"
+          [options]="attributes" [(ngModel)]="manageDFF.attribute7"></p-dropdown>
+      </div>
+      <div class="field col-12 md:col-6 lg:col-6">
+        <label for="name" class="mb-2">เลขที่อุบัติเหตุ</label>
+        <p-dropdown styleClass="col-12" optionLabel="name" optionValue="code" placeholder="Select Attributes"
+          [options]="attributes" [(ngModel)]="manageDFF.attribute8"></p-dropdown>
+      </div>
+      <div class="field col-12 md:col-6 lg:col-6">
+        <label for="name" class="mb-2">เลขที่รับแจ้งอุบัติเหตุ</label>
+        <p-dropdown styleClass="col-12" optionLabel="name" optionValue="code" placeholder="Select Attributes"
+          [options]="attributes" [(ngModel)]="manageDFF.attribute9"></p-dropdown>
+      </div>
+      <div class="field col-12 md:col-6 lg:col-6">
+        <label for="name" class="mb-2">Collection Contract Ref No</label>
+        <p-dropdown styleClass="col-12" optionLabel="name" optionValue="code" placeholder="Select Attributes"
+          [options]="attributes" [(ngModel)]="manageDFF.attribute10"></p-dropdown>
+      </div>
+      <div class="field col-12 md:col-6 lg:col-6">
+        <label for="name" class="mb-2">งวดที่</label>
+        <p-dropdown styleClass="col-12" optionLabel="name" optionValue="code" placeholder="Select Attributes"
+          [options]="attributes" [(ngModel)]="manageDFF.attribute11"></p-dropdown>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-outlined p-button-primary"
+      (click)="manageGlobalDffDialog = false;"></button>
+    <button pButton pRipple label="Save" icon="pi pi-save" class="p-button-primary mr-0"
+      (click)="updateManageGlobalDff()"></button>
+  </ng-template>
+</p-dialog>

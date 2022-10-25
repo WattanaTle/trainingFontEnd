@@ -1,0 +1,10 @@
+[
+	{
+		"charge_date_type": "Receipt Date",
+		"charge_date_desc": "วันที่รับชำระ"
+	},
+	{
+		"charge_date_type": "Effective Date",
+		"charge_date_desc": "วันที่คุ้มครองกรมธรรม์"
+	}
+]

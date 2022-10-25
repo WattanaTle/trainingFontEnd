@@ -1,0 +1,72 @@
+[
+	{
+		"code": 112022,
+		"name": "Agent"
+	},
+	{
+		"code": 112021,
+		"name": "Broker"
+	},
+	{
+		"code": 112020,
+		"name": "Court"
+	},
+	{
+		"code": 112032,
+		"name": "Customer"
+	},
+	{
+		"code": 112017,
+		"name": "DUMMY"
+	},
+	{
+		"code": 112024,
+		"name": "Dealer"
+	},
+	{
+		"code": 112031,
+		"name": "Employee"
+	},
+	{
+		"code": 112023,
+		"name": "Finance"
+	},
+	{
+		"code": 112016,
+		"name": "Garage"
+	},
+	{
+		"code": 112029,
+		"name": "Government"
+	},
+	{
+		"code": 112018,
+		"name": "Hospital"
+	},
+	{
+		"code": 112027,
+		"name": "Reinsurer"
+	},
+	{
+		"code": 112026,
+		"name": "Sender"
+	},
+	{
+		"code": 112028,
+		"name": "Supplier"
+	},
+	{
+		"code": 112019,
+		"name": "Third-Party"
+	},
+	{
+		"code": 112025,
+		"name": "inhouse"
+	},
+	{
+		"code": 112030,
+		"name": "ผู้ถือเงินสดย่อย"
+	}
+]
+
+

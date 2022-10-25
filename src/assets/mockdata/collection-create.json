@@ -1,0 +1,20 @@
+[
+    {   
+        "id":1,
+        "dueDate":"12/2/2022",
+        "amount":213,
+        "interestAmount":111,
+        "totalAmount":11,
+        "note":"งวดที่ 1",
+        "enteredDate":"3/2/2022"
+    },
+    {   
+        "id":2,
+        "dueDate":"12/2/2022",
+        "amount":100,
+        "interestAmount":111,
+        "totalAmount":100,
+        "note":"งวดที่ 1",
+        "enteredDate":"3/2/2022"
+    }
+]
